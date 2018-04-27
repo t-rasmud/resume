@@ -1,0 +1,97 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{\huge{Rashmi}}{\huge{Mudduluru}}
+\title{\large{email: rashmi4@cs.washington.edu}}
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Research Interests}
+\cvitem{}{My research interests lie broadly in the areas of Software Engineering, Programming Languages and Verification.}
+
+\section{Education}
+\cventry{}{PhD Candidate, Computer Science and Engineering}{University of Washington}{Seattle}
+{}{CGPA: 4/4, Advisor: Prof. Michael Ernst} 
+\cventry{}{M.Sc(Engg), Computer Science}{Indian Institute of Science}{Bangalore}
+{}{Received 2015, CGPA: 6.3/8, Advisor: Dr. Murali Krishna Ramanathan \newline{} Thesis: Efficient Instrumentation for Object Flow Profiling}  % arguments 3 to 6 can be left empty
+%\cventry{2006--2010}{B.E, Computer Science}{Coimbatore Institute of Technology}{Coimbatore}{}{CGPA - 9.24/10}
+
+\section{Conference Publications}
+\cvlistitem{Rashmi Mudduluru, Pantazis Deligiannis, Ankush Desai, Akash Lal, Shaz Qadeer \textbf{Lasso detection using partial-state caching}, Formal Methods in
+Computer-Aided Design (FMCAD), 2017.}
+\cvlistitem{Rashmi Mudduluru, Murali Krishna Ramanathan, \textbf{Efficient Flow Profiling for Detecting Performance Bugs}, 25th International Symposium on Software Testing and Analysis (ISSTA), 2016. \newline{}
+[Received the \textbf{ACM SIGSOFT Distinguished paper award}].}
+\cvlistitem{Pantazis Deligiannis, Matt McCutchen, Paul Thomson, Shuo Chen, Alastair F. Donaldson, 
+John Erickson, Cheng Huang, Akash Lal, Rashmi Mudduluru, Shaz Qadeer, Wolfram Schulte,  \textbf{Uncovering Bugs in Distributed Storage Systems during Testing (Not in Production!)}, 14th USENIX Conference on File and Storage Technologies (FAST), 2016.}
+\cvlistitem{Monika Dhok, Rashmi Mudduluru, Murali Krishna Ramanathan, \textbf{Pegasus: Automatic Barrier Inference for Stable
+Multithreaded Systems}, International Symposium on Software Testing and Analysis (ISSTA), 2015.}
+\cvlistitem{Rashmi Mudduluru, Murali Krishna Ramanathan, \textbf{Efficient Incremental Static Analysis Using Path Abstraction}, 17th International Conference on Fundamental Approaches to Software Engineering (FASE), 2014.}
+
+\section{Selected Projects}
+\cvlistitem{Created a runtime analysis that identifies liveness bugs in distributed systems. The analysis detected repeating states in an execution trace that violated a liveness property. 
+Several features of the tool were designed with the aim of keeping the runtime overheads at a minimum.
+It was able to identify real bugs in production code like Microsoft Azure storage vNext System. }
+\cvlistitem{Implemented a dynamic data race detector for programs written in P\#, a DSL for developing and testing asynchronous systems
+using the happens before algorithm. Dynamic instrumentation was done with the help of Extended Reflection, a library that facilitates inserting callbacks for MSIL instructions.}
+\cvlistitem{Designed and built a profiler that tracks the precise data path taken by objects in Java programs. Implementation was done in Java on top of the Calfuzzer/Soot framework.}
+\cvlistitem{Built an incremental static analyzer on top of SATURN, a constraint based
+static analysis tool for finding bugs. Implementation was done in OCaml and Berkeley DB.}
+\cvlistitem{Implemented a static null pointer dereference analysis tool for JAVA programs using the
+Soot bytecode analysis framework.}
+
+\section{Graduate Courses}
+\cvitem{}{Concepts of Programming Languages, Software Engineering, Data Visualization, Program analysis and verification, Design and analysis of algorithms, Automata theory and
+computability, Topics in software bug detection, Automated verification.}
+
+\section{Professional Experience}
+\cventry{}{Research Fellow}{Microsoft Research, India}{Bangalore}{2015--2017}{Mentor: Dr. Akash Lal}
+
+\section{Service}
+\cvlistitem{Teaching Assistant for the under graduate course \textit{Data Structures and Algorithms} at the University of Washington.}
+\cvlistitem{Teaching Assistant for the under graduate course \textit{Software Engineering} at the University of Washington.}
+\cvlistitem{Teaching Assistant for the graduate course \textit{Automata Theory and Computability} at the Indian Institute of Science.}
+\cvlistitem{Student volunteer at \textit{International Conference on Software Engineering (ICSE) 2014.}}
+
+%\section{Awards and Scholarships}
+%\cvlistitem{ACM SIGSOFT Distinguished paper award for the paper \textit{Efficient Flow Profiling for Detecting Performance Bugs} at ISSTA 2016.}
+%\cvlistitem{Received the PLMW scholarship for attending POPL 2015.}
+%\cvlistitem{Secured 99.7 percentile in Graduate Aptitude Test in Engineering (GATE) 2012.}
+
+%\section{References}
+%\cvitem{}{Dr. Akash Lal \newline{} Senior Researcher, \newline{} Microsoft Research, India,
+%\newline{} \href{https://www.microsoft.com/en-us/research/people/akashl/}{https://www.microsoft.com/en-us/research/people/akashl/}\newline{}}
+
+%\cvitem{}{Dr. Murali Krishna Ramanathan \newline{} Assistant Professor, Department of Computer Science and 
+%Automation, \newline{} Indian Institute of Science,
+%\newline{} \href{http://drona.csa.iisc.ac.in/~muralikrishna/}{http://drona.csa.iisc.ac.in/\textasciitilde muralikrishna/}\newline{}}
+
+%\cvitem{}{Dr. Deepak D'Souza \newline{} Associate Professor, Department of Computer Science and 
+%Automation, \newline{} Indian Institute of Science,
+%\newline{} \href{http://drona.csa.iisc.ernet.in/~deepakd/}{http://drona.csa.iisc.ernet.in/\textasciitilde deepakd/}}
+
+\end{document}
