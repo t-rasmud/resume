@@ -25,7 +25,9 @@
 
 % personal data
 \name{\huge{Rashmi}}{\huge{Mudduluru}}
-\title{\large{email: rashmi4@cs.washington.edu}}
+\title{\large{\\rashmi4@cs.washington.edu  
+\\ PhD student
+\\ CSE 402, Paul G. Allen School of Computer Science \& Engineering}}
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
@@ -36,10 +38,10 @@
 
 \section{Education}
 \cventry{}{PhD Candidate, Computer Science and Engineering}{University of Washington}{Seattle}
-{}{CGPA: 4/4, Advisor: Prof. Michael Ernst} 
-\cventry{}{M.Sc(Engg), Computer Science}{Indian Institute of Science}{Bangalore}
+{}{CGPA: 3.8/4, Advisor: Prof. Michael Ernst} 
+\cventry{}{M.Sc(Engg), Computer Science}{Indian Institute of Science}{India}
 {}{Received 2015, CGPA: 6.3/8, Advisor: Dr. Murali Krishna Ramanathan \newline{} Thesis: Efficient Instrumentation for Object Flow Profiling}  % arguments 3 to 6 can be left empty
-%\cventry{2006--2010}{B.E, Computer Science}{Coimbatore Institute of Technology}{Coimbatore}{}{CGPA - 9.24/10}
+%\cventry{2006--2010}{B.E, Computer Science}{Anna University}{India}{}{CGPA - 9.24/10}
 
 \section{Conference Publications}
 \cvlistitem{Rashmi Mudduluru, Pantazis Deligiannis, Ankush Desai, Akash Lal, Shaz Qadeer \textbf{Lasso detection using partial-state caching}, Formal Methods in
@@ -52,35 +54,45 @@ John Erickson, Cheng Huang, Akash Lal, Rashmi Mudduluru, Shaz Qadeer, Wolfram Sc
 Multithreaded Systems}, International Symposium on Software Testing and Analysis (ISSTA), 2015.}
 \cvlistitem{Rashmi Mudduluru, Murali Krishna Ramanathan, \textbf{Efficient Incremental Static Analysis Using Path Abstraction}, 17th International Conference on Fundamental Approaches to Software Engineering (FASE), 2014.}
 
-\section{Selected Projects}
-\cvlistitem{Created a runtime analysis that identifies liveness bugs in distributed systems. The analysis detected repeating states in an execution trace that violated a liveness property. 
-Several features of the tool were designed with the aim of keeping the runtime overheads at a minimum.
-It was able to identify real bugs in production code like Microsoft Azure storage vNext System. }
-\cvlistitem{Implemented a dynamic data race detector for programs written in P\#, a DSL for developing and testing asynchronous systems
-using the happens before algorithm. Dynamic instrumentation was done with the help of Extended Reflection, a library that facilitates inserting callbacks for MSIL instructions.}
-\cvlistitem{Designed and built a profiler that tracks the precise data path taken by objects in Java programs. Implementation was done in Java on top of the Calfuzzer/Soot framework.}
-\cvlistitem{Built an incremental static analyzer on top of SATURN, a constraint based
-static analysis tool for finding bugs. Implementation was done in OCaml and Berkeley DB.}
-\cvlistitem{Implemented a static null pointer dereference analysis tool for JAVA programs using the
-Soot bytecode analysis framework.}
-
-\section{Graduate Courses}
-\cvitem{}{Concepts of Programming Languages, Software Engineering, Data Visualization, Program analysis and verification, Design and analysis of algorithms, Automata theory and
-computability, Topics in software bug detection, Automated verification.}
-
 \section{Professional Experience}
 \cventry{}{Research Fellow}{Microsoft Research, India}{Bangalore}{2015--2017}{Mentor: Dr. Akash Lal}
+
+\section{Research Projects}
+\cvlistitem{Created a runtime analysis that identifies liveness bugs in distributed systems. The analysis detected repeating states in a given execution trace that violated a liveness property. 
+Several features of the tool were designed with the aim of keeping the runtime overheads at a minimum.
+The tool identified real bugs in production code like Microsoft Azure storage vNext System. }
+\cvlistitem{Implemented a dynamic data race detector for programs written in P\#, a DSL for developing and testing asynchronous systems
+using the happens before algorithm. I tracked all runtime memory reads and writes with the help of Extended Reflection, a library that facilitates dynamic instrumentation by inserting callbacks for MSIL instructions.}
+\cvlistitem{Designed and built a profiler that tracks the precise data path taken by objects in Java programs. I implemented
+this tool in Java on top of the Calfuzzer/Soot framework. This tool helped identify performance issues caused by memory bloat 
+in several Java programs. Fixing these issues significantly improved the performance of the programs under test.}
+%\cvlistitem{Built an incremental static analyzer on top of SATURN, a constraint based
+%static analysis tool for finding bugs. Implementation was done in OCaml and Berkeley DB.}
+
+\section{Graduate Course Projects}
+\cvlistitem{Built an interactive data visualization tool in d3 that summarizes the relationship between pairs
+of genome structures as part of a three member team.}
+\cvlistitem{Built a code search tool that matches a given input query on the parse tree of the source code.
+This was done in a team of three.}
+\cvlistitem{Implemented a static null pointer dereference analysis tool for Java programs using the
+Soot bytecode analysis framework.}
+
+%\section{Graduate Courses}
+%\cvitem{}{Concepts of Programming Languages, Software Engineering, Data Visualization, Program analysis and verification, 
+%Computer Systems, Design and analysis of algorithms, Automata theory and
+%computability, Topics in software bug detection, Automated verification.}
+
+\section{Awards and Scholarships}
+\cvlistitem{ACM SIGSOFT Distinguished paper award for the paper \textit{Efficient Flow Profiling for Detecting Performance Bugs} at ISSTA 2016.}
+\cvlistitem{Received the PLMW scholarship for attending POPL 2015.}
+%\cvlistitem{Secured 99.7 percentile in Graduate Aptitude Test in Engineering (GATE) 2012.}
 
 \section{Service}
 \cvlistitem{Teaching Assistant for the under graduate course \textit{Data Structures and Algorithms} at the University of Washington.}
 \cvlistitem{Teaching Assistant for the under graduate course \textit{Software Engineering} at the University of Washington.}
 \cvlistitem{Teaching Assistant for the graduate course \textit{Automata Theory and Computability} at the Indian Institute of Science.}
-\cvlistitem{Student volunteer at \textit{International Conference on Software Engineering (ICSE) 2014.}}
-
-%\section{Awards and Scholarships}
-%\cvlistitem{ACM SIGSOFT Distinguished paper award for the paper \textit{Efficient Flow Profiling for Detecting Performance Bugs} at ISSTA 2016.}
-%\cvlistitem{Received the PLMW scholarship for attending POPL 2015.}
-%\cvlistitem{Secured 99.7 percentile in Graduate Aptitude Test in Engineering (GATE) 2012.}
+%\cvlistitem{Student volunteer at \textit{International Conference on Software Engineering (ICSE) 2014.}}
+\cvlistitem{Served in the Artifact Evaluation Committees of PLDI 2017, ISSTA 2017, and ISSTA 2018}
 
 %\section{References}
 %\cvitem{}{Dr. Akash Lal \newline{} Senior Researcher, \newline{} Microsoft Research, India,
