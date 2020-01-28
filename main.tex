@@ -37,8 +37,8 @@
 \cvitem{}{My research interests lie broadly in the areas of Software Engineering, Programming Languages and Verification.}
 
 \section{Education}
-\cventry{}{PhD Candidate, Computer Science and Engineering}{University of Washington}{Seattle}
-{}{CGPA: 3.7/4, Advisor: Prof. Michael Ernst} 
+\cventry{}{PhD Candidate, Computer Science and Engineering}{University of Washington}{Seattle (2017 - )}
+{}{CGPA: 3.6/4, Advisor: Prof. Michael Ernst} 
 \cventry{}{M.Sc(Engg), Computer Science}{Indian Institute of Science}{India}
 {}{Received 2015, CGPA: 6.3/8, Advisor: Dr. Murali Krishna Ramanathan \newline{} Thesis: Efficient Instrumentation for Object Flow Profiling}  % arguments 3 to 6 can be left empty
 %\cventry{2006--2010}{B.E, Computer Science}{Anna University}{India}{}{CGPA - 9.24/10}
@@ -69,12 +69,16 @@ nondeterminism errors in a program that had been heavily vetted by its developer
 \cvlistitem{\textbf{Research at Facebook}: Worked on formally proving the safety of LibraBFT consensus protocol. This protocol
     ensures that nodes in a blockchain system have a consistent view of the blockchain. 
     We formalized the critical safety invariants that should be maintained by the implementation in order to guarantee the safety properties
-ensured by the protocol and added these invariants a set of machine-verifiable asserts to the LibraBFT codebase.}
-\cvlistitem{\textbf{Research at MSR}: Created a runtime analysis that identifies liveness bugs in distributed systems. The analysis detected repeating states in a given execution trace that violated a liveness property. 
-Several features of the tool were designed with the aim of keeping the runtime overheads at a minimum.
-The tool identified real bugs in production code like Microsoft Azure storage vNext System. }
-\cvlistitem{\textbf{Research at MSR}: Implemented a dynamic data race detector for programs written in P\#, a DSL for developing and testing asynchronous systems
-using the happens before algorithm. I tracked all runtime memory reads and writes with the help of Extended Reflection, a library that facilitates dynamic instrumentation by inserting callbacks for MSIL instructions.}
+ensured by the protocol and added these invariants as a set of machine-verifiable asserts to the LibraBFT codebase.}
+
+\cvlistitem{\textbf{Research at MSR}: \begin{enumerate}
+        \item Created a runtime analysis that identifies liveness bugs in distributed systems. The analysis detected repeating states in a given execution trace that violated a liveness property. 
+        Several features of the tool were designed with the aim of keeping the runtime overheads at a minimum.
+        The tool identified real bugs in production code like Microsoft Azure storage vNext System. 
+        \item Implemented a dynamic data race detector for programs written in P\#, a DSL for developing and testing asynchronous systems
+        using the happens before algorithm. I tracked all runtime memory reads and writes with the help of Extended Reflection, a library that facilitates dynamic instrumentation by inserting callbacks for MSIL instructions.
+\end{enumerate} }
+
 \cvlistitem{\textbf{Masters thesis}:Designed and built a profiler that tracks the precise data path taken by objects in Java programs. I implemented
 this tool in Java on top of the Calfuzzer/Soot framework. This tool helped identify performance issues caused by memory bloat 
 in several Java programs. Fixing these issues significantly improved the performance of the programs under test.}
