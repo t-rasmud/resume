@@ -24,7 +24,7 @@
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
-\name{\huge{Rashmi}}{\huge{Mudduluru}}
+\name{\huge{}}{\huge{Rashmi Mudduluru}}
 \title{\large{\\rashmi4@cs.washington.edu  
 \\ PhD student
 \\ CSE2 380, Paul G. Allen School of Computer Science \& Engineering}}
@@ -43,40 +43,33 @@
 {}{Received 2015, CGPA: 6.3/8, Advisor: Dr. Murali Krishna Ramanathan \newline{} Thesis: Efficient Instrumentation for Object Flow Profiling}  % arguments 3 to 6 can be left empty
 %\cventry{2006--2010}{B.E, Computer Science}{Anna University}{India}{}{CGPA - 9.24/10}
 
-\section{Conference Publications}
-\cvlistitem{Rashmi Mudduluru, Pantazis Deligiannis, Ankush Desai, Akash Lal, Shaz Qadeer \textbf{Lasso detection using partial-state caching}, Formal Methods in
-Computer-Aided Design (FMCAD), 2017.}
-\cvlistitem{Rashmi Mudduluru, Murali Krishna Ramanathan, \textbf{Efficient Flow Profiling for Detecting Performance Bugs}, 25th International Symposium on Software Testing and Analysis (ISSTA), 2016. \newline{}
-[Received the \textbf{ACM SIGSOFT Distinguished paper award}].}
-\cvlistitem{Pantazis Deligiannis, Matt McCutchen, Paul Thomson, Shuo Chen, Alastair F. Donaldson, 
-John Erickson, Cheng Huang, Akash Lal, Rashmi Mudduluru, Shaz Qadeer, Wolfram Schulte,  \textbf{Uncovering Bugs in Distributed Storage Systems during Testing (Not in Production!)}, 14th USENIX Conference on File and Storage Technologies (FAST), 2016.}
-\cvlistitem{Monika Dhok, Rashmi Mudduluru, Murali Krishna Ramanathan, \textbf{Pegasus: Automatic Barrier Inference for Stable
-Multithreaded Systems}, International Symposium on Software Testing and Analysis (ISSTA), 2015.}
-\cvlistitem{Rashmi Mudduluru, Murali Krishna Ramanathan, \textbf{Efficient Incremental Static Analysis Using Path Abstraction}, 17th International Conference on Fundamental Approaches to Software Engineering (FASE), 2014.}
-
 \section{Professional Experience}
 \cventry{}{Research Fellow}{Microsoft Research, India}{Bangalore}{2015--2017}{Mentor: Dr. Akash Lal}
 \cventry{}{Research Intern}{Facebook}{Seattle}{June 2019--September 2019}{Mentors: Dr. Herman Venter, Dr. Shaz Qadeer}
+\cventry{}{Research Intern}{Amazon}{Seattle}{June 2020--September 2020}{Mentors: Prof. Michael Ernst}
 
 \section{Research Projects}
-\cvlistitem{\textbf{Research at UW}: Built a type system that can express and verify determinism properties of sequential programs.
-The key ideas
-in the type system are type qualifiers for nondeterminism, order-nondeterminism, and determinism; type
-well-formedness rules to restrict the typings for collections; and enhancements to polymorphism that improve
-precision when analyzing collection operations. We implemented our type system for Java. Our type checker warns if a program is nondeterministic
-or verifies that the program is deterministic. In a case study of a 24,000-line software project, it found previously unknown
-nondeterminism errors in a program that had been heavily vetted by its developers. }
+\cvlistitem{\textbf{Research at UW}: \textit{Compile-time verification of correctness properties related to collections}:
+    \begin{enumerate}
+        \item Built a type system that can express and verify determinism properties of sequential programs.
+        The key ideas in the type system are type qualifiers for nondeterminism, order-nondeterminism, and determinism; type well-formedness rules to restrict the typings for collections; and enhancements to polymorphism that improve precision when analyzing collection operations. We implemented our type system for Java. Our type checker warns if a program is nondeterministic or verifies that the program is deterministic. We formalized the type system and proved its soundness. In case studies of 90097 lines of code, the Determinism Checker found 87 previously-unknown nondeterminism errors, even in programs that had been heavily vetted by developers who were greatly concerned about nondeterminism errors.
+        \item My current research projects aims to verify iteration correctness over collections. Iterating over empty collections leads to run-time errors. It is not uncommon for these bugs to escape into production. Our type-system based solution has qualifiers that express whether the \textit{hasNext} property of an Iterator is true or false and that can express whether the Collection
+        is empty or not. Extant approaches look at this as an API misuse issue and propose heuristic-based  solutions and therefore, cannot guarantee soundness. In a comparative study, our tool reported all the bugs found by previous techniques with high precision. As ours is a sound approach, our tool did not report a few of the false positives reported by the heuristic-based tools.  
+    \end{enumerate}}
+   
 \cvlistitem{\textbf{Research at Facebook}: Worked on formally proving the safety of LibraBFT consensus protocol. This protocol
     ensures that nodes in a blockchain system have a consistent view of the blockchain. 
     We formalized the critical safety invariants that should be maintained by the implementation in order to guarantee the safety properties
 ensured by the protocol and added these invariants as a set of machine-verifiable asserts to the LibraBFT codebase.}
-
+\cvlistitem{\textbf{Research at Amazon}: Built a tool to verify the integrity of 
+    user data stored in the cloud. Even data that is protected by cryptographic hashes is prone to hardware errors threatening the safety contracts expected by the customers. We identified program locations that must have consistent data to ensure integrity. We built a compile-time checker that tracks the cryptographic hashes corresponding to user data and verifies that they are consistent a these locations.}
+    
 \cvlistitem{\textbf{Research at MSR}: \begin{enumerate}
         \item Created a runtime analysis that identifies liveness bugs in distributed systems. The analysis detected repeating states in a given execution trace that violated a liveness property. 
         Several features of the tool were designed with the aim of keeping the runtime overheads at a minimum.
         The tool identified real bugs in production code like Microsoft Azure storage vNext System. 
         \item Implemented a dynamic data race detector for programs written in P\#, a DSL for developing and testing asynchronous systems
-        using the happens before algorithm. I tracked all runtime memory reads and writes with the help of Extended Reflection, a library that facilitates dynamic instrumentation by inserting callbacks for MSIL instructions.
+        using the happens-before algorithm. I tracked all runtime memory reads and writes with the help of Extended Reflection, a library that facilitates dynamic instrumentation by inserting callbacks for MSIL instructions.
 \end{enumerate} }
 
 \cvlistitem{\textbf{Masters thesis}:Designed and built a profiler that tracks the precise data path taken by objects in Java programs. I implemented
@@ -84,6 +77,17 @@ this tool in Java on top of the Calfuzzer/Soot framework. This tool helped ident
 in several Java programs. Fixing these issues significantly improved the performance of the programs under test.}
 %\cvlistitem{Built an incremental static analyzer on top of SATURN, a constraint based
 %static analysis tool for finding bugs. Implementation was done in OCaml and Berkeley DB.}
+
+\section{Conference Publications}
+\cvlistitem{Rashmi Mudduluru, Jason Waataja, Suzanne Millstein, Michael D. Ernst \textbf{Verifying Determinism in Sequential Programs}, International Conference on Software Engineering (ICSE), 2021.}
+\cvlistitem{Rashmi Mudduluru, Pantazis Deligiannis, Ankush Desai, Akash Lal, Shaz Qadeer \textbf{Lasso detection using partial-state caching}, Formal Methods in
+    Computer-Aided Design (FMCAD), 2017.}
+\cvlistitem{Rashmi Mudduluru, Murali Krishna Ramanathan, \textbf{Efficient Flow Profiling for Detecting Performance Bugs}, 25th International Symposium on Software Testing and Analysis (ISSTA), 2016. \newline{}
+    [Received the \textbf{ACM SIGSOFT Distinguished paper award}].}
+\cvlistitem{Pantazis Deligiannis, Matt McCutchen, Paul Thomson, Shuo Chen, Alastair F. Donaldson, 
+    John Erickson, Cheng Huang, Akash Lal, Rashmi Mudduluru, Shaz Qadeer, Wolfram Schulte, \textbf{Uncovering Bugs in Distributed Storage Systems during Testing (Not in Production!)}, 14th USENIX Conference on File and Storage Technologies (FAST), 2016.}
+\cvlistitem{Monika Dhok, Rashmi Mudduluru, Murali Krishna Ramanathan, \textbf{Pegasus: Automatic Barrier Inference for Stable Multithreaded Systems}, International Symposium on Software Testing and Analysis (ISSTA), 2015.}
+\cvlistitem{Rashmi Mudduluru, Murali Krishna Ramanathan, \textbf{Efficient Incremental Static Analysis Using Path Abstraction}, 17th International Conference on Fundamental Approaches to Software Engineering (FASE), 2014.}
 
 \section{Graduate Course Projects}
 \cvlistitem{Built an interactive data visualization tool in d3 that summarizes the relationship between pairs
